@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import DieHard from './die_hard.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         <h1> Welcome to Kodflix! </h1>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="Movie">Favourite Movie!</header>
+      <img src= {DieHard} alt='Die Hard'/>
+      <header className = 'Shows'> TV Shows</header>
+      <div className='Row'> 
+            <div className = 'First'><h2>Supernatural</h2></div>
+            <div className = 'Second'><h2>Scrubs</h2></div> 
+            <div className = 'Third'><h2>The Office</h2> </div> 
+      </div>  
+      <div className='Row'> 
+            <div className = 'First'><h2>NCIS</h2></div>
+            <div className = 'Second'><h2>The Walking Dead</h2></div> 
+            <div className = 'Third'><h2>Brooklyn 9-9</h2> </div> 
+      </div>  
+
+
     </div>
   );
 }
