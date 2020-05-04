@@ -20,6 +20,17 @@ margin:50px;
 justify-content: center;
 }
 
+.item {
+  display: flex;
+flex:1;
+
+}
+
+.item img {
+ max-height: 100%;
+}
+  
+
 .First {
 flex: 1;
 }
