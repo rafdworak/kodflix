@@ -54,9 +54,9 @@ function App() {
       </div>
 
       <div className='Row'>
-        <Movie image={ncis} />
-        <Movie image={walkingDead} />
-        <Movie image={brooklyn} />
+        <Movie image={ncis} title='NCIS'/>
+        <Movie image={walkingDead} title='The Walking Dead' />
+        <Movie image={brooklyn} title='Brooklyn 9-9' />
       </div>
 
     </div>
