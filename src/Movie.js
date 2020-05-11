@@ -12,9 +12,9 @@ import React from 'react'
 
 export default function Movie(props) {
     return (
-      <Router>
+      
       <Link to={`${props.title}`} className='card'><img src={props.image}/>
       <div className='overlay'>{props.title}</div></Link>
-      </Router>
+      
     );
   }
