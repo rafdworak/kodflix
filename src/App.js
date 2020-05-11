@@ -6,16 +6,9 @@ import ncis from './ncis.jpg';
 import office from './office.jpg';
 import supernatural from './supernatural.jpg';
 import scrubs from './scrubs.jpg';
+import Movie from './Movie.js';
 
 import './App.css';
-
-function Movie(props) {
-  return (
-    <div className='card'><img src={props.image}/>
-    <div className='overlay'>{props.title}</div></div>
-
-  );
-}
 
 function App() {
   return (
