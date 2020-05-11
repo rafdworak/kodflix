@@ -11,7 +11,7 @@ import './App.css';
 
 function Movie(props) {
   return (
-    <div className='card'><img src={props.image} alt= 'test'/>
+    <div className='card'><img src={props.image}/>
     <div className='overlay'>{props.title}</div></div>
 
   );
