@@ -1,9 +1,20 @@
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
+
 import React from 'react'
+
 
 export default function Movie(props) {
     return (
-      <div className='card'><img src={props.image}/>
-      <div className='overlay'>{props.title}</div></div>
-  
+      <Router>
+      <Link to={`${props.title}`} className='card'><img src={props.image}/>
+      <div className='overlay'>{props.title}</div></Link>
+      </Router>
     );
   }
