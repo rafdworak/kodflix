@@ -10,19 +10,16 @@ import scrubs from './scrubs.jpg';
 export default function TvShows() {
 
     return (
-        <div>
-        <div className='Row'>
+    
+        <div className='container'>
             <Movie image={supernatural} title='Supernatural' />
             <Movie image={scrubs} title='Scrubs' />
             <Movie image={office} title='The Office' />
-        </div>
-
-        <div className='Row'>
             <Movie image={ncis} title='NCIS' />
             <Movie image={walkingDead} title='The Walking Dead' />
             <Movie image={brooklyn} title='Brooklyn 9-9' />
         </div>
-        </div>
+        
     );
     
 }
