@@ -15,7 +15,7 @@ export default function TvShows() {
               <Movie image={brooklyn} title='Brooklyn 9-9' />
           </div> */
         <div className='container'>{
-            getTvShows().map(movie => (
+            getTvShows().map(movie => ( //movie here is just an object not tied to any function
                 <Movie
                     key={movie.id}
                     id={movie.id}
