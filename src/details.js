@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import getTvShows from './getTvShows.js'
-import Movie from './Movie.js';
-
-
+import { Redirect } from 'react-router-dom';
 
 /*export default function Details(props) {
     return (
@@ -26,7 +24,6 @@ class Details extends Component {
   }
 
   componentDidMount() {
-    let details = this.props.computedMatch.params.details;
     this.getData();
   }
 
@@ -46,16 +43,23 @@ export default class ShowPage extends Component {
   }
   componentDidMount() {
     let details = this.props.match.params.details;
-    let chosenTvShow = getTvShows().find(({ id }) => id === details)
+    let chosenTvShow = getTvShows().find(({ id }) => id === details);
     this.setState({
       shows: chosenTvShow
     });
+
   }
   render() {
-    return (
-      <div className='message'>
-        <h1>Title: {this.state.shows.title}</h1>
-      </div>
-    );
+    if (this.state.shows.title === undefined) {
+      return <Redirect to='./not-found'></Redirect>;
+    } else {
+      return (
+        <div className='message'>
+          <h1>Title: {this.state.shows.title}</h1>
+        </div>
+      );
+    }
   }
 }
+
+
