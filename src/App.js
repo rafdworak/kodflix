@@ -5,6 +5,7 @@ import {
   Route,
  } from "react-router-dom";
 import Details from './details.js';
+import ShowPage from './details.js';
 
 import './App.css';
 
@@ -14,7 +15,7 @@ class App extends Component {
       <Router>
         <div className="App">
          <Route exact path ='/'><TvShows /></Route>
-         <Route exact path ='/:details'><Details /></Route>
+         <Route exact path ='/:details' component = {ShowPage}></Route>
         </div>
       </Router>
     );

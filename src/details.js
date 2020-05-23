@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import getTvShows from './getTvShows.js'
+import Movie from './Movie.js';
+
 
 
 /*export default function Details(props) {
@@ -8,7 +11,7 @@ import React, { Component } from 'react'
   }
 */
 
-export default class Details extends Component {
+class Details extends Component {
   constructor(props) {
     super(props);
     var message = 'Hello, this will be the details page for each Movie & TV show :) ';
@@ -23,6 +26,7 @@ export default class Details extends Component {
   }
 
   componentDidMount() {
+    let details = this.props.computedMatch.params.details;
     this.getData();
   }
 
@@ -30,6 +34,27 @@ export default class Details extends Component {
     return (
       <div className='message'>
         <h1>{this.state.message}</h1>
+      </div>
+    );
+  }
+}
+
+export default class ShowPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { shows: [] };
+  }
+  componentDidMount() {
+    let details = this.props.match.params.details;
+    let chosenTvShow = getTvShows().find(({ id }) => id === details)
+    this.setState({
+      shows: chosenTvShow
+    });
+  }
+  render() {
+    return (
+      <div className='message'>
+        <h1>Title: {this.state.shows.title}</h1>
       </div>
     );
   }
