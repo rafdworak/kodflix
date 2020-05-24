@@ -9,6 +9,38 @@ import { Redirect } from 'react-router-dom';
   }
 */
 
+export default class ShowPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { shows: [] };
+  }
+  componentDidMount() {
+    let details = this.props.match.params.details;
+    let chosenTvShow = getTvShows().find(({ id }) => id === details);
+    this.setState({
+      shows: chosenTvShow
+    });
+
+  }
+  render() {
+    if (this.state.shows === undefined) {
+      return <Redirect to='./not-found'></Redirect>;
+    } else {
+      return (
+        <div className='message'>
+          <img src={this.state.shows.image}/>
+          <h1>Title: {this.state.shows.title}</h1>
+          <h2>Title: {this.state.shows.synopsis}</h2>
+        </div>
+      );
+    }
+  }
+}
+
+
+
+
+/*
 class Details extends Component {
   constructor(props) {
     super(props);
@@ -35,31 +67,4 @@ class Details extends Component {
     );
   }
 }
-
-export default class ShowPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { shows: [] };
-  }
-  componentDidMount() {
-    let details = this.props.match.params.details;
-    let chosenTvShow = getTvShows().find(({ id }) => id === details);
-    this.setState({
-      shows: chosenTvShow
-    });
-
-  }
-  render() {
-    if (this.state.shows.title === undefined) {
-      return <Redirect to='./not-found'></Redirect>;
-    } else {
-      return (
-        <div className='message'>
-          <h1>Title: {this.state.shows.title}</h1>
-        </div>
-      );
-    }
-  }
-}
-
-
+*/

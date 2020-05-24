@@ -15,15 +15,14 @@ class App extends Component {
   render() {
     return (
       <Router>
-      
         <div className="App">
         <Switch>
          <Route exact path ='/'><TvShows /></Route>
          <Route exact path ='/not-found' component = {NotFound}></Route>
+
          <Route exact path ='/:details' component = {ShowPage}></Route>
          </Switch>
         </div>
-      
       </Router>
     );
   }
