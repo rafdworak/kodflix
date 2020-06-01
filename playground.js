@@ -1,5 +1,37 @@
+function append(array, element) {
+   return array = array.push(element);
+    //return array;
+}
 
-function doStuff(list) {
+console.log(append(['Donald', 'Kim'], 'Boris'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function doStuff(list) {
     return list.join(' in a ');
 }
 let list= ['cat', 'box'];
@@ -22,3 +54,4 @@ function upperCase(array) {
 let array =['one', 'two', 'three'];
 
 console.log(upperCase(array));
+*/

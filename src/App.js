@@ -5,7 +5,6 @@ import {
   Route,
   Switch,
  } from "react-router-dom";
-import Details from './details.js';
 import ShowPage from './details.js';
 import NotFound from './NotFound.js';
 

@@ -27,10 +27,12 @@ export default class ShowPage extends Component {
       return <Redirect to='./not-found'></Redirect>;
     } else {
       return (
-        <div className='message'>
+        <div className='show-container'>
           <img src={this.state.shows.image}/>
-          <h1>Title: {this.state.shows.title}</h1>
-          <h2>Title: {this.state.shows.synopsis}</h2>
+          <div className='show-content'>
+          <h1>{this.state.shows.title}</h1>
+          <h2>{this.state.shows.synopsis}</h2>
+          </div>
         </div>
       );
     }

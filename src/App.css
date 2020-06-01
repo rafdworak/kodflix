@@ -36,6 +36,18 @@ overflow: hidden;
   height:100%;
 }
 
+.show-container{
+text-align:center;
+display: flex;
+
+
+}
+
+.show-content{
+ flex:1;
+ border: 1px solid green;
+}
+
 @media only screen and (min-width: 768px) {
   .container { display:flex;}
   }
