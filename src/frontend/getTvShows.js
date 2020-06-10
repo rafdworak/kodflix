@@ -1,9 +1,9 @@
-import brooklyn from './brooklyn.jpg';
-import walkingDead from './WalkingDead.jpg';
-import ncis from './ncis.jpg';
-import office from './office.jpg';
-import supernatural from './supernatural.jpg';
-import scrubs from './scrubs.jpg';
+import brooklyn from './img/brooklyn.jpg';
+import walkingDead from './img/WalkingDead.jpg';
+import ncis from './img/ncis.jpg';
+import office from './img/office.jpg';
+import supernatural from './img/supernatural.jpg';
+import scrubs from './img/scrubs.jpg';
 
 
 export default function getTvShows() {
